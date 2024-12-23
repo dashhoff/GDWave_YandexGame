@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1f93b0273ae27424aa6ac2cc69508ea3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 235877
+  packageName: PluginYG - Yandex Game integration
+  packageVersion: 1.6.3
+  assetPath: Assets/YandexGame/ScriptsYG/Leaderboards/InternalScripts/Leaderboards_yg.cs
+  uploadId: 682427

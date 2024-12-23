@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b7208805d6f28fc43b57c565e8a7d7ae
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 235877
+  packageName: PluginYG - Yandex Game integration
+  packageVersion: 1.6.3
+  assetPath: Assets/YandexGame/LICENSE.txt
+  uploadId: 682427

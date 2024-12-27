@@ -11,18 +11,12 @@ public class FXManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.CorrectedMerge += CorrectParticlePlay;
-        EventManager.FailedMerge += FailParticlePlay;
-
-        EventManager.Victoried += VictorySoundPlay;
+        EventManager.Victoried += VictoryParticlePlay;
     }
 
     private void OnDisable()
     {
-        EventManager.CorrectedMerge -= CorrectParticlePlay;
-        EventManager.FailedMerge -= FailParticlePlay;
-
-        EventManager.Victoried -= VictorySoundPlay;
+        EventManager.Victoried -= VictoryParticlePlay;
     }
 
     private void CorrectParticlePlay()
@@ -41,7 +35,7 @@ public class FXManager : MonoBehaviour
         }
     }
 
-    private void VictorySoundPlay()
+    private void VictoryParticlePlay()
     {
         for (int i = 0; i < _confettiParticles.Length; i++)
         {

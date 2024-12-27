@@ -74,16 +74,12 @@ public class UIController : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.CorrectedMerge += CorrectAnimation;
-
         EventManager.Victoried += Victory;
         EventManager.Defeated += Defeat;
     }
 
     private void OnDisable()
     {
-        EventManager.CorrectedMerge -= CorrectAnimation;
-
         EventManager.Victoried -= Victory;
         EventManager.Defeated -= Defeat;
     }

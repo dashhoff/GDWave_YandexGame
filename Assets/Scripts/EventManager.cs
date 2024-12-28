@@ -1,13 +1,15 @@
 using System;
 using UnityEngine;
 
-public class EventManager : MonoBehaviour
+public static class EventManager
 {
-    public static EventManager Instance;
+    //public static EventManager Instance;
 
-    public static event Action CorrectedMerge;
+    public static event Action GameStarted;
 
-    public static event Action FailedMerge;
+    public static event Action GameStoped;
+
+    public static event Action LevelSpawned;
 
     public static event Action Victoried;
 
@@ -17,24 +19,13 @@ public class EventManager : MonoBehaviour
 
     public static event Action AdEndet;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
             Destroy(gameObject);
-    }
-
-    public static void OnCorrectedMerge()
-    {
-        CorrectedMerge?.Invoke();
-    }
-
-    public static void OnFailedMerge()
-    {
-        FailedMerge?.Invoke();
-    }
-
+    }*/
     public static void OnVictoried()
     {
         Victoried?.Invoke();
@@ -44,6 +35,12 @@ public class EventManager : MonoBehaviour
     {
         Defeated?.Invoke();
     }
+
+    public static void OnSpawnLevel()
+    {
+        LevelSpawned?.Invoke();
+    }
+
 
     public static void StartAd()
     {

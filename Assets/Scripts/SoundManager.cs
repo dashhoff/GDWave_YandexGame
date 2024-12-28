@@ -15,18 +15,12 @@ public class SoundManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.CorrectedMerge += CorrectSoundPlay;
-        EventManager.FailedMerge += FailSoundPlay;
-
         EventManager.Victoried += VictorySoundPlay;
         EventManager.Defeated += DefeatSoundPlay;
     }
 
     private void OnDisable()
     {
-        EventManager.CorrectedMerge -= CorrectSoundPlay;
-        EventManager.FailedMerge -= FailSoundPlay;
-
         EventManager.Victoried -= VictorySoundPlay;
         EventManager.Defeated -= DefeatSoundPlay;
     }

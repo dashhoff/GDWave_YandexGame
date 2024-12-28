@@ -52,6 +52,8 @@ public class UIController : MonoBehaviour
     [Space(20f)]
     [Header("Текста")]
     [SerializeField] private TMP_Text _levelText;
+    [SerializeField] private TMP_Text _scoreText;
+    [SerializeField] private TMP_Text _bestScoreText;
     [SerializeField] private TMP_Text _moneyText;
 
     private void Awake()
@@ -74,16 +76,12 @@ public class UIController : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.CorrectedMerge += CorrectAnimation;
-
         EventManager.Victoried += Victory;
         EventManager.Defeated += Defeat;
     }
 
     private void OnDisable()
     {
-        EventManager.CorrectedMerge -= CorrectAnimation;
-
         EventManager.Victoried -= Victory;
         EventManager.Defeated -= Defeat;
     }

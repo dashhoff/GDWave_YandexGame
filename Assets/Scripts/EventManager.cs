@@ -9,8 +9,6 @@ public static class EventManager
 
     public static event Action GameStoped;
 
-    public static event Action LevelSpawned;
-
     public static event Action Victoried;
 
     public static event Action Defeated;
@@ -35,12 +33,6 @@ public static class EventManager
     {
         Defeated?.Invoke();
     }
-
-    public static void OnSpawnLevel()
-    {
-        LevelSpawned?.Invoke();
-    }
-
 
     public static void StartAd()
     {

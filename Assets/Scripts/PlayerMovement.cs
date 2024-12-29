@@ -42,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Collision!");
+
         if (collision.gameObject.CompareTag("Trap"))
         {
             EventManager.OnDefeated();
@@ -50,8 +52,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Trigger!");
+
         if (collision.gameObject.CompareTag("LevelLoader"))
         {
+            Debug.Log("LevelLoad");
+
             EventManager.OnSpawnLevel();
         }
     }

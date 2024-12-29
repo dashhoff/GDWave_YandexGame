@@ -7,7 +7,7 @@ public class LevelSpawner : MonoBehaviour
 
     [SerializeField] private List<GameObject> _levels;
     [SerializeField] private List<GameObject> _spawnedLevels;
-    [SerializeField] private Transform _spawnPoint;
+    private Vector3 _spawnPoint;
 
     private void Awake()
     {
@@ -37,9 +37,9 @@ public class LevelSpawner : MonoBehaviour
 
         GameObject levelPrefab = _levels[Random.Range(0, _levels.Count)];
 
-        _spawnPoint.position = new Vector3(levelPrefab.transform.position.x + 25, levelPrefab.transform.position.y, levelPrefab.transform.position.z);
+        _spawnPoint = new Vector3(levelPrefab.transform.position.x + 150, levelPrefab.transform.position.y, levelPrefab.transform.position.z);
 
-        GameObject spawnedLevel = Instantiate(levelPrefab, _spawnPoint.position, Quaternion.identity);
+        GameObject spawnedLevel = Instantiate(levelPrefab, _spawnPoint, Quaternion.identity);
         _spawnedLevels.Add(spawnedLevel);
 
         Debug.Log($"Spawned level: {spawnedLevel.name}");

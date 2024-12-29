@@ -26,24 +26,6 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("LevelLoader"))
-        {
-            EventManager.OnSpawnLevel();
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-
-    }
-
     private void OnEnable()
     {
         EventManager.GameStarted += StartMovement;
@@ -56,6 +38,22 @@ public class PlayerMovement : MonoBehaviour
         EventManager.GameStarted -= StartMovement;
 
         EventManager.GameStoped -= StopMovement;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            EventManager.OnDefeated();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("LevelLoader"))
+        {
+            EventManager.OnSpawnLevel();
+        }
     }
 
     private void StartMovement()

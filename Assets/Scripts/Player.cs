@@ -22,13 +22,23 @@ public class Player : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        EventManager.Defeated += Death;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.Defeated -= Death;
+    }
+
     private void Victory()
     {
-        EventManager.OnVictoried();
+
     }
 
     private void Death()
     {
-        EventManager.OnDefeated();
+        gameObject.SetActive(false);
     }
 }

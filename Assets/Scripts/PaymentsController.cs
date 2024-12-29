@@ -30,13 +30,13 @@ public class PaymentsController : MonoBehaviour
     {
         // Ваш код для обработки покупки. Например:
         if (id == "1")
-            GameManager.Instance.Money += 50;
+            GameSettings.Money += 50;
         else if (id == "2")
-            GameManager.Instance.Money += 150;
+            GameSettings.Money += 150;
         else if (id == "3")
-            GameManager.Instance.Money += 250;
+            GameSettings.Money += 250;
 
-        GameManager.Instance.Save();
+        GameSettings.Save();
 
         UIController.Instance.UpdateMoneyText();
     }

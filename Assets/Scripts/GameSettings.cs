@@ -1,16 +1,26 @@
-using UnityEngine;
+using NaughtyAttributes;
+using YG;
 
-public class GameSettings : MonoBehaviour
+public static class GameSettings
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static int Money;
+
+    public static int BestScore;
+
+    public static void Save()
     {
-        
+        YandexGame.savesData.Money = Money;
+        YandexGame.savesData.BestScore = BestScore;
+
+        YandexGame.SaveProgress();
     }
 
-    // Update is called once per frame
-    void Update()
+    [Button]
+    public static void ResetProgress()
     {
-        
+        Money = 0;
+        BestScore = 0;
+
+        Save();
     }
 }

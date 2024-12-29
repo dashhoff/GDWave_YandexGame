@@ -1,6 +1,6 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -11,41 +11,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(id);
     }
 
-    public void SkipLevel()
+    public void FadeLoadSceneId(int id)
     {
         Time.timeScale = 1.0f;
 
-        GameManager.Instance.Location++;
-        GameManager.Instance.Save();
-
-        if (GameManager.Instance.Location >= 16)
-        {
-            GameManager.Instance.Location = 4;
-            GameManager.Instance.Save();
-        }
-
-        SceneManager.LoadScene(GameManager.Instance.Location + 1);
-    }
-
-    public void LoadNextScene()
-    {
-        Time.timeScale = 1.0f;
-
-
-        if (GameManager.Instance.Location >= 16)
-        {
-            GameManager.Instance.Location = 4;
-            GameManager.Instance.Save();
-        }
-
-        SceneManager.LoadScene(GameManager.Instance.Location + 1);
-    }
-
-    public void LoadCurrentLevel()
-    {
-        Time.timeScale = 1.0f;
-
-        SceneManager.LoadScene(GameManager.Instance.Location + 1);
+        SceneManager.LoadScene(id);
     }
 
     public void RestartScene()

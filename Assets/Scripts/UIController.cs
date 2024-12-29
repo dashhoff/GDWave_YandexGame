@@ -66,7 +66,6 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         UpdateMoneyText();
-        UpdateLevelText();
     }
 
     private void Update()
@@ -111,17 +110,7 @@ public class UIController : MonoBehaviour
     {
         if (_moneyText == null) return;
 
-        _moneyText.text = "" + GameManager.Instance.Money;
-    }
-
-    public void UpdateLevelText()
-    {
-        if (_levelText == null) return;
-
-        if (YandexGame.savesData.language == "ru")
-            _levelText.text = "уровень " + GameManager.Instance.CurrentLevel;
-        else
-            _levelText.text = "level " + GameManager.Instance.CurrentLevel;
+        _moneyText.text = "" + GameSettings.Money;
     }
 
     public void OpenPanel(GameObject panel)

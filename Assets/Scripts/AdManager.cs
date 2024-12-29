@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using YG;
 
@@ -34,7 +33,6 @@ public class AdManager : MonoBehaviour
         {
             case 1:
                 AddMoney(_moneyAfterVictory);
-                UIController.Instance.UpdateLevelText();
                 break;
         }
     }
@@ -46,10 +44,6 @@ public class AdManager : MonoBehaviour
 
     private void AddMoney(int value)
     {
-        GameManager.Instance.Money += value;
-        GameManager.Instance.Save();
-
-        UIController.Instance.UpdateLevelText();
     }
 }
 

@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 724121008}
-  _moveSpeed: 5000
+  _moveDuration: 0.5
   _offset: {x: 0, y: 0, z: -10}
 --- !u!1 &807600748
 GameObject:

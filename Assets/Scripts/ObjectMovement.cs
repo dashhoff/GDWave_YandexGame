@@ -1,12 +1,11 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class ObjectMovement : MonoBehaviour
 {
     [SerializeField] private GameObject _target;
-    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _moveDuration = 0.5f;
     [SerializeField] private Vector3 _offset;
-
-    private Vector3 _targetPosition = new Vector3(0, 0, -10);
 
     private void Awake()
     {
@@ -14,13 +13,12 @@ public class ObjectMovement : MonoBehaviour
             _target = gameObject;
     }
 
-    private void Update()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _moveSpeed * Time.deltaTime);
-    }
-
     public void MoveToPoint(Transform point)
     {
-        _targetPosition = point.position + _offset;
+        Vector3 targetPosition = point.position + _offset;
+
+        _target.transform
+            .DOMove(targetPosition, _moveDuration)
+            .SetEase(Ease.InOutBack);
     }
 }

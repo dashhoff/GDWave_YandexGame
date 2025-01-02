@@ -62,15 +62,6 @@ public class UIController : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    private void Start()
-    {
-        UpdateMoneyText();
-    }
-
-    private void Update()
-    {
-
-    }
 
     private void OnEnable()
     {
@@ -82,6 +73,11 @@ public class UIController : MonoBehaviour
     {
         EventManager.Victoried -= Victory;
         EventManager.Defeated -= Defeat;
+    }
+
+    public void Init()
+    {
+        UpdateMoneyText();
     }
 
     private void Victory()
@@ -109,7 +105,7 @@ public class UIController : MonoBehaviour
     {
         if (_moneyText == null) return;
 
-        _moneyText.text = "" + GameSettings.Money;
+        _moneyText.text = "" + GameSettings.Instance.Money;
     }
 
     public void OpenPanel(GameObject panel)

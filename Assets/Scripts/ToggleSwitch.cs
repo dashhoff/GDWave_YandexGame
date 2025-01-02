@@ -27,21 +27,21 @@ public class ToggleSwitch : MonoBehaviour
     [SerializeField] private Color _enabledColor;
     [SerializeField] private Color _disabledColor;
 
-    private void Start()
-    {
-        GetInfo();
-
-        Init();
-    }
-
     public void Switch()
     {
         _enabled = !_enabled;
 
-        Init();
+        UpdateToggle();
     }
 
-    private void Init()
+    public void Init()
+    {
+        GetInfo();
+
+        UpdateToggle();
+    }
+
+    public void UpdateToggle()
     {
         if (_enabled)
         {
@@ -65,11 +65,10 @@ public class ToggleSwitch : MonoBehaviour
     {
         if (_settingName == "Ёффекты")
         {
-            if (GameSettings.EffectsEnabled)
+            if (GameSettings.Instance.EffectsEnabled)
                 _enabled = true;
             else
                 _enabled = false;
-
         }
     }
 
@@ -78,11 +77,11 @@ public class ToggleSwitch : MonoBehaviour
         if (_settingName == "Ёффекты")
         {
             if (_enabled)
-                GameSettings.EffectsEnabled = true;
+                GameSettings.Instance.EffectsEnabled = true;
             else
-                GameSettings.EffectsEnabled = false;
+                GameSettings.Instance.EffectsEnabled = false;
 
-            GameSettings.Save();
+            GameSettings.Instance.Save();
         }
     }
 

@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class GameSettings : MonoBehaviour
 {
-    public static int Money;
+    public static GameSettings Instance;
 
-    public static int BestScore;
+    public int Money;
 
-    public static float SoundValue;
-    public static bool EffectsEnabled;
+    public int BestScore;
+
+    public int PlayerSkinId;
+
+    public float SoundValue;
+    public bool EffectsEnabled;
 
     private void Start()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    public void Init()
     {
         SetParameters();
     }
 
-    public static void SetParameters()
+    public void SetParameters()
     {
         Money = YandexGame.savesData.Money;
         BestScore = YandexGame.savesData.BestScore;
+
+        PlayerSkinId = YandexGame.savesData.PlayerSkinId;
 
         SoundValue = YandexGame.savesData.SoundValue;
         EffectsEnabled = YandexGame.savesData.EffectsEnabled;
@@ -30,10 +44,13 @@ public class GameSettings : MonoBehaviour
         Debug.Log("EffectsEnabled: " + EffectsEnabled);
     }
 
-    public static void Save()
+    [Button]
+    public void Save()
     {
         YandexGame.savesData.Money = Money;
         YandexGame.savesData.BestScore = BestScore;
+
+        YandexGame.savesData.PlayerSkinId = PlayerSkinId;
 
         YandexGame.savesData.SoundValue = SoundValue;
         YandexGame.savesData.EffectsEnabled = EffectsEnabled;
@@ -42,10 +59,13 @@ public class GameSettings : MonoBehaviour
     }
 
     [Button]
-    public static void ResetProgress()
+    public void ResetProgress()
     {
         Money = 0;
         BestScore = 0;
+
+        PlayerSkinId = 0;
+
         SoundValue = 1;
         EffectsEnabled = true;
 

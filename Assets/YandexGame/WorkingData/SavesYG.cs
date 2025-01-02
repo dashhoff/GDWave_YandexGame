@@ -15,6 +15,9 @@ namespace YG
         public int Money = 10;
         public int BestScore = 0;
 
+        public bool[] OpenSkins = { true, false };
+        public int PlayerSkinId = 0;
+
         public float SoundValue = 1;
         public bool EffectsEnabled = true;
 

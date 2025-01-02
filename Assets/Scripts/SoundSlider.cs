@@ -5,18 +5,20 @@ public class SoundSlider : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
 
-    private void Start()
+    public void Init()
     {
         SetValue();
     }
 
     public void SaveValue()
     {
-        GameSettings.SoundValue = _slider.value;
+        GameSettings.Instance.SoundValue = _slider.value;
+
+        GameSettings.Instance.Save();
     }
 
     public void SetValue()
     {
-        _slider.value = GameSettings.SoundValue;
+        _slider.value = GameSettings.Instance.SoundValue;
     }
 }

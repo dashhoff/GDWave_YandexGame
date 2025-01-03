@@ -1,12 +1,11 @@
 using UnityEngine;
 using YG;
 
-public class AdManager : MonoBehaviour
+public class AdController : MonoBehaviour
 {
-    public static AdManager Instance;
+    public static AdController Instance;
 
-    [SerializeField] private int _moneyAfterVictory = 15;
-    [SerializeField] private int _timeAfterDefeat = 60;
+    [SerializeField] private int _rewardMoney = 10;
 
     private void Awake()
     {
@@ -20,8 +19,6 @@ public class AdManager : MonoBehaviour
     {
         YandexGame.RewardVideoEvent += Rewarded;
     }
-
-    // Отписываемся от события открытия рекламы в OnDisable
     private void OnDisable()
     {
         YandexGame.RewardVideoEvent -= Rewarded;
@@ -32,7 +29,7 @@ public class AdManager : MonoBehaviour
         switch (id)
         {
             case 1:
-                AddMoney(_moneyAfterVictory);
+                GameManager.Instance.AddMoney(_rewardMoney);
                 break;
         }
     }
@@ -40,10 +37,6 @@ public class AdManager : MonoBehaviour
     public void OpenRewardAd(int id)
     {
         YandexGame.RewVideoShow(id);
-    }
-
-    private void AddMoney(int value)
-    {
     }
 }
 

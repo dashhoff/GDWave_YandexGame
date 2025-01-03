@@ -52,6 +52,14 @@ public class GameManager : MonoBehaviour
         UIController.Instance.UpdateMoneyText();
     }
 
+    public void AddMoney(int value)
+    {
+        GameSettings.Instance.Money += value;
+        GameSettings.Instance.Save();
+
+        UIController.Instance.UpdateMoneyText();
+    }
+
     public void Defeat()
     {
         if (Score > GameSettings.Instance.BestScore)

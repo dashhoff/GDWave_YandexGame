@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private int _score;
+    public int Score;
 
     private void Awake()
     {
@@ -19,11 +19,15 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         EventManager.Defeated += Defeat;
+
+        EventManager.LevelCompleted += AddScore;
     }
 
     private void OnDisable()
     {
         EventManager.Defeated -= Defeat;
+
+        EventManager.LevelCompleted -= AddScore;
     }
 
     public void Init()
@@ -31,25 +35,24 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void LevelCompleted()
-    {
-        EventManager.OnCompleteLevel();
-    }
-
     public void AddScore()
     {
-        _score++;
+        Score++;
+
+        UIController.Instance.UpdateScoreText();
     }
 
     public void AddMoney()
     {
         GameSettings.Instance.Money++;
+
+        UIController.Instance.UpdateMoneyText();
     }
 
     public void Defeat()
     {
-        if (_score > GameSettings.Instance.BestScore)
-            GameSettings.Instance.BestScore = _score;
+        if (Score > GameSettings.Instance.BestScore)
+            GameSettings.Instance.BestScore = Score;
 
         GameSettings.Instance.Save();
     }

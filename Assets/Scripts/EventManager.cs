@@ -12,8 +12,6 @@ public static class EventManager
 
     public static event Action GameUnPaused;
 
-    public static event Action LevelSpawned;
-
     public static event Action LevelCompleted;
 
     public static event Action Victoried;
@@ -49,11 +47,6 @@ public static class EventManager
     public static void OffPause()
     {
         GameUnPaused?.Invoke();
-    }
-
-    public static void OnSpawnLevel()
-    {
-        LevelSpawned?.Invoke();
     }
 
     public static void OnCompleteLevel()

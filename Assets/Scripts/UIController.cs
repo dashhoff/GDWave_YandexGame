@@ -67,17 +67,22 @@ public class UIController : MonoBehaviour
     {
         EventManager.Victoried += Victory;
         EventManager.Defeated += Defeat;
+
+        EventManager.LevelCompleted += UpdateScoreText;
     }
 
     private void OnDisable()
     {
         EventManager.Victoried -= Victory;
         EventManager.Defeated -= Defeat;
+
+        EventManager.LevelCompleted -= UpdateScoreText;
     }
 
     public void Init()
     {
         UpdateMoneyText();
+        UpdateScoreText();
     }
 
     private void Victory()
@@ -100,7 +105,20 @@ public class UIController : MonoBehaviour
     {
         if (_moneyText == null) return;
 
-        _moneyText.text = "" + GameSettings.Instance.Money;
+        if (YandexGame.savesData.language == "ru")
+            _moneyText.text = "ÃŒÕ≈“€: " + GameSettings.Instance.Money;
+        else
+            _moneyText.text = "MONEY: " + GameSettings.Instance.Money;
+    }
+
+    public void UpdateScoreText()
+    {
+        if (_scoreText == null) return;
+
+        if (YandexGame.savesData.language == "ru")
+            _scoreText.text = "Œ◊ »: " + GameManager.Instance.Score;
+        else
+            _scoreText.text = "SCORE: " + GameManager.Instance.Score;
     }
 
     public void OpenPanel(GameObject panel)

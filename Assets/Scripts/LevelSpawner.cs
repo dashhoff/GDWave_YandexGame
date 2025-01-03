@@ -20,12 +20,12 @@ public class LevelSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.LevelSpawned += SpawnLevel;
+        EventManager.LevelCompleted += SpawnLevel;
     }
 
     private void OnDisable()
     {
-        EventManager.LevelSpawned -= SpawnLevel;
+        EventManager.LevelCompleted -= SpawnLevel;
     }
 
     public void SpawnLevel()

@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("LevelLoad");
 
-            EventManager.OnSpawnLevel();
+            EventManager.OnCompleteLevel();
         }
     }
 

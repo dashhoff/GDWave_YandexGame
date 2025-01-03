@@ -14,6 +14,8 @@ public static class EventManager
 
     public static event Action LevelCompleted;
 
+    public static event Action CoinCollected;
+
     public static event Action Victoried;
 
     public static event Action Defeated;
@@ -52,6 +54,11 @@ public static class EventManager
     public static void OnCompleteLevel()
     {
         LevelCompleted?.Invoke();
+    }
+
+    public static void OnCollectCoin()
+    {
+        CoinCollected?.Invoke();
     }
 
     public static void StartAd()

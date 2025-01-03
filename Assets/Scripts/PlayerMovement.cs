@@ -62,6 +62,13 @@ public class PlayerMovement : MonoBehaviour
 
             EventManager.OnCompleteLevel();
         }
+
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            Debug.Log("CoinCollected");
+
+            EventManager.OnCollectCoin();
+        }
     }
 
     private void StartMovement()

@@ -3,43 +3,37 @@ using UnityEngine;
 public class FXManager : MonoBehaviour
 {
     [Space(20f)]
-    [SerializeField] private ParticleSystem[] _correctMergeParticle;
-    [SerializeField] private ParticleSystem[] _failMergeParticle;
+    [SerializeField] private PlayerMovement _playerMovement;
 
     [Space(20f)]
-    [SerializeField] private ParticleSystem[] _confettiParticles;
+    [SerializeField] private GameObject _levelCompletedParticle;
+    [SerializeField] private GameObject _moneyParticle;
+    [SerializeField] private GameObject _defeatParticle;
+
 
     private void OnEnable()
     {
-        EventManager.Victoried += VictoryParticlePlay;
+        EventManager.Defeated += DefeatParticlePlay;
+
+        EventManager.LevelCompleted += LevelCompletedParticle;
+
     }
 
     private void OnDisable()
     {
-        EventManager.Victoried -= VictoryParticlePlay;
+        EventManager.Defeated -= DefeatParticlePlay;
+
+        EventManager.LevelCompleted -= LevelCompletedParticle;
+
     }
 
-    private void CorrectParticlePlay()
+    private void LevelCompletedParticle()
     {
-        for (int i = 0; i < _correctMergeParticle.Length; i++)
-        {
-            _correctMergeParticle[i].Play();
-        }
+        Instantiate(_levelCompletedParticle, _playerMovement.transform.position, Quaternion.identity);
     }
 
-    private void FailParticlePlay()
+    private void DefeatParticlePlay()
     {
-        for (int i = 0; i < _failMergeParticle.Length; i++)
-        {
-            _failMergeParticle[i].Play();
-        }
-    }
-
-    private void VictoryParticlePlay()
-    {
-        for (int i = 0; i < _confettiParticles.Length; i++)
-        {
-            _confettiParticles[i].Play();
-        }
+        Instantiate(_defeatParticle, _playerMovement.transform.position, Quaternion.identity);
     }
 }

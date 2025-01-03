@@ -111,6 +111,15 @@ public class UIController : MonoBehaviour
             _moneyText.text = "MONEY: " + GameSettings.Instance.Money;
     }
 
+    public void UpdateBestScoreText()
+    {
+        if (_bestScoreText == null) return;
+
+        if (YandexGame.savesData.language == "ru")
+            _scoreText.text = "À”◊ÿ»… –≈«”À‹“¿“: " + GameSettings.Instance.BestScore;
+        else
+            _scoreText.text = "BEST SCORE: " + GameSettings.Instance.BestScore;
+    }
     public void UpdateScoreText()
     {
         if (_scoreText == null) return;

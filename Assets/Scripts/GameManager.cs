@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         EventManager.Defeated += Defeat;
 
         EventManager.LevelCompleted += AddScore;
+        EventManager.CoinCollected += AddMoney;
     }
 
     private void OnDisable()
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         EventManager.Defeated -= Defeat;
 
         EventManager.LevelCompleted -= AddScore;
+        EventManager.CoinCollected -= AddMoney;
     }
 
     public void Init()
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
     public void AddMoney()
     {
         GameSettings.Instance.Money++;
+        GameSettings.Instance.Save();
 
         UIController.Instance.UpdateMoneyText();
     }

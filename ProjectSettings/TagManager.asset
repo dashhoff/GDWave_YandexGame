@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trap
   - LevelLoader
+  - Coin
   layers:
   - Default
   - TransparentFX

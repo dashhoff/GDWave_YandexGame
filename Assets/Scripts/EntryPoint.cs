@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using System.Collections;
 using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
@@ -12,8 +12,15 @@ public class EntryPoint : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartGameCoroutine());
+    }
+
+    private IEnumerator StartGameCoroutine()
+    {
         GameSettings.Init();
         GameManager.Init();
+
+        yield return new WaitForSecondsRealtime(0.5f);
 
         UIController.Init();
         SoundSlider.Init();
@@ -22,6 +29,7 @@ public class EntryPoint : MonoBehaviour
         {
             ToggleSwitches[i].Init();
         }
+        
 
     }
 }

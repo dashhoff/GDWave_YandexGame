@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Rigidbody2D _rb2D;
 
+    [SerializeField] private SpriteRenderer _playerSpriteRenderer;
+
     private void Start()
     {
         direction = new Vector2(1, -1).normalized;
@@ -79,9 +81,17 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(direction * _speed * Time.deltaTime);
 
         if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space))
+        {
             direction = new Vector2(1, 1).normalized;
+
+            _playerSpriteRenderer.transform.rotation = Quaternion.Euler(0, 0, -45);
+        }
         else
+        {
             direction = new Vector2(1, -1).normalized;
+
+            _playerSpriteRenderer.transform.rotation = Quaternion.Euler(0, 0, -135);
+        }
     }
 
     public void SetSpeed(float newSpeed)

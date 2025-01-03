@@ -96,11 +96,6 @@ public class UIController : MonoBehaviour
         OpenPopup(DefeatPopup, 0.5f);
     }
 
-    private void CorrectAnimation()
-    {
-        UpdateMoneyText();
-    }
-
     public void UpdateMoneyText()
     {
         if (_moneyText == null) return;

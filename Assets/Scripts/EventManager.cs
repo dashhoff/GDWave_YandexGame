@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 public static class EventManager
 {
@@ -9,7 +8,13 @@ public static class EventManager
 
     public static event Action GameStoped;
 
+    public static event Action GamePaused;
+
+    public static event Action GameUnPaused;
+
     public static event Action LevelSpawned;
+
+    public static event Action LevelCompleted;
 
     public static event Action Victoried;
 
@@ -36,9 +41,24 @@ public static class EventManager
         Defeated?.Invoke();
     }
 
+    public static void OnPause()
+    {
+        GamePaused?.Invoke();
+    }
+
+    public static void OffPause()
+    {
+        GameUnPaused?.Invoke();
+    }
+
     public static void OnSpawnLevel()
     {
         LevelSpawned?.Invoke();
+    }
+
+    public static void OnCompleteLevel()
+    {
+        LevelCompleted?.Invoke();
     }
 
     public static void StartAd()

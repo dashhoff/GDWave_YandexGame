@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 84479450}
   - component: {fileID: 84479449}
   - component: {fileID: 84479451}
+  - component: {fileID: 84479452}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -469,6 +470,26 @@ MonoBehaviour:
   _endScale: {x: 1.1, y: 1.1, z: 1.1}
   _durationToEndScale: 0.2
   _durationToStartScale: 0.2
+--- !u!114 &84479452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84479447}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eece8a820d094124aa4b660ac53289e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startScale: {x: 1, y: 1, z: 1}
+  _startPhaseDuration: 1
+  _delayAfterStartPhase: 0.2
+  _endScale: {x: 1.1, y: 1.1, z: 1.1}
+  _endPhaseDuration: 1
+  _delayAfterEndPhase: 0.2
+  _autoStart: 1
+  _loop: 1
 --- !u!1 &100630357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,7 +2828,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 32063507}
-  - {fileID: 2120800241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &680397602
@@ -6355,7 +6375,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 680397601}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2120800242
 MonoBehaviour:
@@ -7339,9 +7359,10 @@ SceneRoots:
   - {fileID: 913494276}
   - {fileID: 303400107}
   - {fileID: 987406826}
+  - {fileID: 2120800241}
   - {fileID: 894649229}
   - {fileID: 1397781878}
   - {fileID: 2137066374}
-  - {fileID: 1030085937}
   - {fileID: 1254366521}
   - {fileID: 680397601}
+  - {fileID: 1030085937}

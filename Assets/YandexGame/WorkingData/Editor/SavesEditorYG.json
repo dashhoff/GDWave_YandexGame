@@ -1,5 +1,5 @@
 {
-    "idSave": 561,
+    "idSave": 2641,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -10,6 +10,6 @@
         false
     ],
     "PlayerSkinId": 0,
-    "SoundValue": 1.0,
-    "EffectsEnabled": false
+    "SoundValue": 0.8206718564033508,
+    "EffectsEnabled": true
 }

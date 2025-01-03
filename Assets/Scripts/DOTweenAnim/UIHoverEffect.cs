@@ -17,11 +17,11 @@ public class UIHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        transform.DOScale(_endScale, _durationToEndScale).SetEase(Ease.OutBack);
+        transform.DOScale(_endScale, _durationToEndScale).SetEase(Ease.OutBack).SetUpdate(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        transform.DOScale(_startScale, _durationToStartScale).SetEase(Ease.InBack);
+        transform.DOScale(_startScale, _durationToStartScale).SetEase(Ease.InBack).SetUpdate(true);
     }
 }

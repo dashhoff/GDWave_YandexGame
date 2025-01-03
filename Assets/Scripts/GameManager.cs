@@ -1,4 +1,5 @@
 using UnityEngine;
+using YG;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +9,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //Application.targetFrameRate = 120;
-
         if (Instance == null)
             Instance = this;
         else
@@ -37,6 +36,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void UpdateLeaderboard()
+    {
+        YandexGame.NewLeaderboardScores("BestScore", YandexGame.savesData.BestScore);
+    }
+
     public void AddScore()
     {
         Score++;
@@ -62,10 +66,12 @@ public class GameManager : MonoBehaviour
 
     public void Defeat()
     {
-        if (Score > GameSettings.Instance.BestScore)
+        if (Score > GameSettings.Instance.BestScore) 
             GameSettings.Instance.BestScore = Score;
 
         GameSettings.Instance.Save();
+
+        UpdateLeaderboard();
     }
 
     public void PauseOn()

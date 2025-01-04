@@ -31,6 +31,12 @@ public static class EventManager
         else
             Destroy(gameObject);
     }*/
+
+    public static void OnGameStart()
+    {
+        GameStarted?.Invoke();
+    }
+
     public static void OnVictoried()
     {
         Victoried?.Invoke();

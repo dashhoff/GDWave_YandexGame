@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void StartGame()
+    {
+        EventManager.OnGameStart();
+    }
+
     public void UpdateLeaderboard()
     {
         YandexGame.NewLeaderboardScores("BestScore", YandexGame.savesData.BestScore);

@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
             GameSettings.Instance.Save();
         }
 
+        UpdateLeaderboard();
+
         UIController.Instance.UpdateScoreText();
         UIController.Instance.UpdateBestScoreText();
     }
@@ -79,6 +81,13 @@ public class GameManager : MonoBehaviour
     public void Defeat()
     {
         UpdateLeaderboard();
+    }
+
+    public void RestartAfterDefeat()
+    {
+        Player.Instance.gameObject.SetActive(true);
+
+        PlayerMovement.Instance.transform.position = new Vector3(PlayerMovement.Instance.transform.position.x, 0, 0);
     }
 
     public void PauseOn()

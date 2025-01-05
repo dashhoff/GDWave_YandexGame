@@ -1,25 +1,17 @@
-
 using UnityEngine;
-
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
     [SerializeField] private PlayerMovement _playerMovement;
 
-    private void Start()
+    private void Awake()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        
-    }
-
-
-    private void Update()
-    {
-        
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
     }
 
     private void OnEnable()
@@ -30,11 +22,6 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         EventManager.Defeated -= Death;
-    }
-
-    private void Victory()
-    {
-
     }
 
     private void Death()

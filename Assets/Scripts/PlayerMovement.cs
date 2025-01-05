@@ -1,12 +1,15 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement Instance;
 
+    [SerializeField] private bool _godMode = false;
+
     [SerializeField] private bool _isMoving = false;
 
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speed = 20;
 
     private Vector2 direction;
 
@@ -52,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Trap"))
         {
+            if (_godMode) return;
+
             EventManager.OnDefeated();
         }
     }
@@ -108,5 +113,19 @@ public class PlayerMovement : MonoBehaviour
     public void SetSpeed(float newSpeed)
     {
         _speed = newSpeed;
+    }
+
+    public void StartGodMode()
+    {
+        StartCoroutine(GodModeCoroutine());
+    }
+
+    private IEnumerator GodModeCoroutine()
+    {
+        _godMode = true;
+
+        yield return new WaitForSeconds(3f);
+
+        _godMode = false;
     }
 }

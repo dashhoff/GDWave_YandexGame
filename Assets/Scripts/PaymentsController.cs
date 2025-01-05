@@ -4,6 +4,7 @@ using YG;
 public class PaymentsController : MonoBehaviour
 {
     public static PaymentsController Instance;
+
     private void Awake()
     {
         if (Instance == null)
@@ -30,11 +31,11 @@ public class PaymentsController : MonoBehaviour
     {
         // Ваш код для обработки покупки. Например:
         if (id == "1")
-            GameSettings.Instance.Money += 50;
+            GameSettings.Instance.SkipAd = true;
         else if (id == "2")
-            GameSettings.Instance.Money += 150;
+            GameSettings.Instance.Money += 100;
         else if (id == "3")
-            GameSettings.Instance.Money += 250;
+            GameSettings.Instance.Money += 5000;
 
         GameSettings.Instance.Save();
 
@@ -45,5 +46,6 @@ public class PaymentsController : MonoBehaviour
     void FailedPurchased(string id)
     {
         // Например, можно открыть уведомление о неуспешности покупки.
+        UIController.Instance.UpdateMoneyText();
     }
 }

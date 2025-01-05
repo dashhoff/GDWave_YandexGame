@@ -35,6 +35,7 @@ public class AdController : MonoBehaviour
         {
             case 1:
                 GameManager.Instance.AddMoney(_rewardMoney);
+                UIController.Instance.UpdateMoneyText();
                 break;
         }
     }

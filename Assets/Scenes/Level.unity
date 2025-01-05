@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b2dceafeae1b442b506e8f3f7667da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _godMode: 0
   _isMoving: 0
   _speed: 20
   _rb2D: {fileID: 201528013}
@@ -2348,6 +2349,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1866707252}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartAfterDefeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1866707252}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: PauseOff
         m_Mode: 1
         m_Arguments:
@@ -2410,6 +2423,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 201528011}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: StartGodMode
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

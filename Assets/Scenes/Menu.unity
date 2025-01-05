@@ -3506,6 +3506,7 @@ GameObject:
   - component: {fileID: 734635212}
   - component: {fileID: 734635214}
   - component: {fileID: 734635213}
+  - component: {fileID: 734635215}
   m_Layer: 5
   m_Name: OtherGame_TMP
   m_TagString: Untagged
@@ -3552,7 +3553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Other game:'
+  m_text: 'Other games:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ca3959ec38424ff42ab4e3a8478c187e, type: 2}
   m_sharedMaterial: {fileID: 4439677828111742576, guid: ca3959ec38424ff42ab4e3a8478c187e, type: 2}
@@ -3579,7 +3580,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.35
+  m_fontSize: 37.8
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3631,6 +3632,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734635211}
   m_CullTransparentMesh: 1
+--- !u!114 &734635215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734635211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ae0d6a81f58b499aa17f012051883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetText: {fileID: 734635213}
+  _ruText: "\u0414\u0420\u0423\u0413\u0418\u0415 \u0418\u0413\u0420\u042B:"
+  _enText: 'OTHER GAMES:'
 --- !u!1 &807600748
 GameObject:
   m_ObjectHideFlags: 0
@@ -6878,6 +6894,7 @@ GameObject:
   - component: {fileID: 1833589222}
   - component: {fileID: 1833589224}
   - component: {fileID: 1833589223}
+  - component: {fileID: 1833589225}
   m_Layer: 5
   m_Name: Leaderboard_TMP
   m_TagString: Untagged
@@ -7003,6 +7020,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833589221}
   m_CullTransparentMesh: 1
+--- !u!114 &1833589225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833589221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ae0d6a81f58b499aa17f012051883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetText: {fileID: 1833589223}
+  _ruText: "\u041B\u0423\u0427\u0428\u0418\u0415 \u0418\u0413\u0420\u041E\u041A\u0418:"
+  _enText: 'BEST PLAYERS:'
 --- !u!1 &1842772946
 GameObject:
   m_ObjectHideFlags: 0
@@ -7805,6 +7837,7 @@ GameObject:
   - component: {fileID: 2020100047}
   - component: {fileID: 2020100049}
   - component: {fileID: 2020100048}
+  - component: {fileID: 2020100050}
   m_Layer: 5
   m_Name: Sound_TMP
   m_TagString: Untagged
@@ -7930,6 +7963,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020100046}
   m_CullTransparentMesh: 1
+--- !u!114 &2020100050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020100046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ae0d6a81f58b499aa17f012051883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetText: {fileID: 2020100048}
+  _ruText: "\u0417\u0412\u0423\u041A\u0418"
+  _enText: SOUNDS
 --- !u!1 &2103619930
 GameObject:
   m_ObjectHideFlags: 0

@@ -1166,6 +1166,7 @@ GameObject:
   - component: {fileID: 483396872}
   - component: {fileID: 483396874}
   - component: {fileID: 483396873}
+  - component: {fileID: 483396875}
   m_Layer: 0
   m_Name: Title_TMP
   m_TagString: Untagged
@@ -1190,7 +1191,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: -150, y: 150}
+  m_SizeDelta: {x: -150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483396873
 MonoBehaviour:
@@ -1291,6 +1292,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483396871}
   m_CullTransparentMesh: 1
+--- !u!114 &483396875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483396871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ae0d6a81f58b499aa17f012051883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetText: {fileID: 483396873}
+  _ruText: "\u041F\u041E\u0420\u0410\u0416\u0415\u041D\u0418\u0415!"
+  _enText: DEFEAT!
 --- !u!1 &485735833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1648,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 599771454}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2722,8 +2738,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1019860939
 MonoBehaviour:
@@ -3805,6 +3821,7 @@ GameObject:
   - component: {fileID: 1446769015}
   - component: {fileID: 1446769017}
   - component: {fileID: 1446769016}
+  - component: {fileID: 1446769018}
   m_Layer: 0
   m_Name: Title_TMP
   m_TagString: Untagged
@@ -3930,6 +3947,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446769014}
   m_CullTransparentMesh: 1
+--- !u!114 &1446769018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446769014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ae0d6a81f58b499aa17f012051883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetText: {fileID: 1446769016}
+  _ruText: "\u0422\u0410\u041F/\u041A\u041B\u0418\u041A \u0427\u0422\u041E\u0411\u042B
+    \u041D\u0410\u0427\u0410\u0422\u042C"
+  _enText: TAP/CLICK TO START
 --- !u!1001 &1458247792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4774,6 +4807,7 @@ GameObject:
   - component: {fileID: 2120737565}
   - component: {fileID: 2120737567}
   - component: {fileID: 2120737566}
+  - component: {fileID: 2120737568}
   m_Layer: 0
   m_Name: Title_TMP
   m_TagString: Untagged
@@ -4797,8 +4831,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: -150, y: 150}
+  m_AnchoredPosition: {x: 0, y: -225}
+  m_SizeDelta: {x: -150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120737566
 MonoBehaviour:
@@ -4847,7 +4881,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.05
+  m_fontSize: 87.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4899,6 +4933,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120737564}
   m_CullTransparentMesh: 1
+--- !u!114 &2120737568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120737564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ae0d6a81f58b499aa17f012051883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetText: {fileID: 2120737566}
+  _ruText: "\u0418\u0413\u0420\u0410 \u041D\u0410 \u041F\u0410\u0423\u0417\u0415"
+  _enText: GAME PAUSED
 --- !u!1 &1044631059850518196
 GameObject:
   m_ObjectHideFlags: 0
@@ -4998,8 +5047,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &1044631059857554093
 GameObject:

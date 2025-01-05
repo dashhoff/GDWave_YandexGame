@@ -3,9 +3,6 @@ using UnityEngine;
 public class FXManager : MonoBehaviour
 {
     [Space(20f)]
-    [SerializeField] private PlayerMovement _playerMovement;
-
-    [Space(20f)]
     [SerializeField] private GameObject _levelCompletedParticle;
     [SerializeField] private GameObject _moneyParticle;
     [SerializeField] private GameObject _defeatParticle;
@@ -29,11 +26,11 @@ public class FXManager : MonoBehaviour
 
     private void LevelCompletedParticle()
     {
-        Instantiate(_levelCompletedParticle, _playerMovement.transform.position, Quaternion.identity);
+        Instantiate(_levelCompletedParticle, PlayerMovement.Instance.transform.position, Quaternion.identity);
     }
 
     private void DefeatParticlePlay()
     {
-        Instantiate(_defeatParticle, _playerMovement.transform.position, Quaternion.identity);
+        Instantiate(_defeatParticle, PlayerMovement.Instance.transform.position, Quaternion.identity);
     }
 }

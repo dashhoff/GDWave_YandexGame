@@ -534,8 +534,8 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Interpolate: 2
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!1 &230858234
@@ -2196,10 +2196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cb71cf1cbd9e548be34ddb544c8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMovement: {fileID: 201528011}
   _levelCompletedParticle: {fileID: 5010422474351448803, guid: 9a183ea07515ecf49ab107b8b8dbdc6b, type: 3}
   _moneyParticle: {fileID: 6292452001195291623, guid: 027e0068e446f2241a8e88c9ad2124b1, type: 3}
-  _defeatParticle: {fileID: 5010422474351448803, guid: 9a183ea07515ecf49ab107b8b8dbdc6b, type: 3}
+  _defeatParticle: {fileID: 3001666073575701928, guid: 2b58a9afbc4eb9d47a738dec6e0f91a7, type: 3}
 --- !u!1 &760736522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,7 +4448,7 @@ MonoBehaviour:
   _errorSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
   _levelCompletedSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
   _coinSound: {fileID: 8300000, guid: 5791151108685494486bb99ea33fbf9d, type: 3}
-  _defeatSound: {fileID: 8300000, guid: b10fceae1f61ac4428387adff026bdbb, type: 3}
+  _defeatSound: {fileID: 8300000, guid: 31e11d071cbbd4f46baa853896c65f44, type: 3}
 --- !u!1 &1843700670
 GameObject:
   m_ObjectHideFlags: 0

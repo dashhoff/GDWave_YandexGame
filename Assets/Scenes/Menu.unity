@@ -3163,9 +3163,9 @@ MonoBehaviour:
   _soundPrefab: {fileID: 5592835032814157348, guid: 1bde634d9fb08f947afd66819e208d77, type: 3}
   _uiSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
   _errorSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
-  _levelCompletedSound: {fileID: 8300000, guid: 5791151108685494486bb99ea33fbf9d, type: 3}
-  _coinSound: {fileID: 0}
-  _defeatSound: {fileID: 8300000, guid: b10fceae1f61ac4428387adff026bdbb, type: 3}
+  _levelCompletedSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
+  _coinSound: {fileID: 8300000, guid: 5791151108685494486bb99ea33fbf9d, type: 3}
+  _defeatSound: {fileID: 8300000, guid: 31e11d071cbbd4f46baa853896c65f44, type: 3}
 --- !u!4 &552162935
 Transform:
   m_ObjectHideFlags: 0

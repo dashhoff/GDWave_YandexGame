@@ -24,6 +24,11 @@ public class AdController : MonoBehaviour
         YandexGame.RewardVideoEvent -= Rewarded;
     }
 
+    public void FullScreenAd()
+    {
+        YandexGame.FullscreenShow();
+    }
+
     private void Rewarded(int id)
     {
         switch (id)

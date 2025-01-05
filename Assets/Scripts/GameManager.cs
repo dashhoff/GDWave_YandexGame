@@ -50,7 +50,14 @@ public class GameManager : MonoBehaviour
     {
         Score++;
 
+        if (GameSettings.Instance.BestScore <= Score)
+        {
+            GameSettings.Instance.BestScore = Score;
+            GameSettings.Instance.Save();
+        }
+
         UIController.Instance.UpdateScoreText();
+        UIController.Instance.UpdateBestScoreText();
     }
 
     public void AddMoney()
@@ -71,11 +78,6 @@ public class GameManager : MonoBehaviour
 
     public void Defeat()
     {
-        if (Score > GameSettings.Instance.BestScore) 
-            GameSettings.Instance.BestScore = Score;
-
-        GameSettings.Instance.Save();
-
         UpdateLeaderboard();
     }
 

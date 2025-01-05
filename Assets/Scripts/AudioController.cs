@@ -11,7 +11,7 @@ public class AudioController : MonoBehaviour
     [SerializeField] private AudioClip _errorSound;
 
     [SerializeField] private AudioClip _levelCompletedSound;
-    [SerializeField] private AudioClip _moneyCollectedSound;
+    [SerializeField] private AudioClip _coinSound;
 
     [SerializeField] private AudioClip _defeatSound;
 
@@ -25,25 +25,20 @@ public class AudioController : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.Defeated += PlaySound("defeat");
         EventManager.LevelCompleted += PlayLevelSound;
+
+        EventManager.Defeated += PlayDefeatSound;
+
+        EventManager.CoinCollected += CoinCollectedSound;
     }
 
     private void OnDisable()
     {
-        EventManager.Defeated -= PlaySound("defeat");
         EventManager.LevelCompleted -= PlayLevelSound;
 
-    }
+        EventManager.Defeated -= PlayDefeatSound;
 
-    public void PlayLevelSound()
-    {
-        GameObject sound = Instantiate(_soundPrefab);
-
-        AudioSource audioSource = sound.GetComponent<AudioSource>();
-        audioSource.clip = _levelCompletedSound;
-        audioSource.volume = GameSettings.Instance.SoundValue;
-        audioSource.Play();
+        EventManager.CoinCollected -= CoinCollectedSound;
     }
 
     public void PlayUISound()
@@ -51,7 +46,44 @@ public class AudioController : MonoBehaviour
         GameObject sound = Instantiate(_soundPrefab);
 
         AudioSource audioSource = sound.GetComponent<AudioSource>();
+
         audioSource.clip = _uiSound;
+        audioSource.volume = GameSettings.Instance.SoundValue;
+        audioSource.Play();
+    }
+
+    public void PlayLevelSound()
+    {
+        GameObject sound = Instantiate(_soundPrefab);
+
+        AudioSource audioSource = sound.GetComponent<AudioSource>();
+
+        audioSource.transform.position = PlayerMovement.Instance.transform.position;
+        audioSource.clip = _levelCompletedSound;
+        audioSource.volume = GameSettings.Instance.SoundValue;
+        audioSource.Play();
+    }
+
+    public void PlayDefeatSound()
+    {
+        GameObject sound = Instantiate(_soundPrefab);
+
+        AudioSource audioSource = sound.GetComponent<AudioSource>();
+
+        audioSource.transform.position = PlayerMovement.Instance.transform.position;
+        audioSource.clip = _defeatSound;
+        audioSource.volume = GameSettings.Instance.SoundValue;
+        audioSource.Play();
+    }
+
+    public void CoinCollectedSound()
+    {
+        GameObject sound = Instantiate(_soundPrefab);
+
+        AudioSource audioSource = sound.GetComponent<AudioSource>();
+
+        audioSource.transform.position = PlayerMovement.Instance.transform.position;
+        audioSource.clip = _coinSound;
         audioSource.volume = GameSettings.Instance.SoundValue;
         audioSource.Play();
     }
@@ -70,8 +102,8 @@ public class AudioController : MonoBehaviour
             case "level":
                 audioSource.clip = _levelCompletedSound;
                 break;
-            case "money":
-                audioSource.clip = _moneyCollectedSound;
+            case "coin":
+                audioSource.clip = _coinSound;
                 break;
             case "error":
                 audioSource.clip = _errorSound;

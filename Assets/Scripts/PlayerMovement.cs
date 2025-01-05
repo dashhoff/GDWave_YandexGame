@@ -1,8 +1,9 @@
-
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     [SerializeField] private bool _isMoving = false;
 
     [SerializeField] private float _speed;
@@ -13,14 +14,17 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private SpriteRenderer _playerSpriteRenderer;
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
     private void Start()
     {
         direction = new Vector2(1, -1).normalized;
-    }
-
-    private void FixedUpdate()
-    {
-
     }
 
     private void Update()

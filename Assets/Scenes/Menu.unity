@@ -3116,7 +3116,7 @@ MonoBehaviour:
   _uiSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
   _errorSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
   _levelCompletedSound: {fileID: 8300000, guid: 5791151108685494486bb99ea33fbf9d, type: 3}
-  _moneyCollectedSound: {fileID: 8300000, guid: 5791151108685494486bb99ea33fbf9d, type: 3}
+  _coinSound: {fileID: 0}
   _defeatSound: {fileID: 8300000, guid: b10fceae1f61ac4428387adff026bdbb, type: 3}
 --- !u!4 &552162935
 Transform:
@@ -3223,7 +3223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &685787274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3507,7 +3507,7 @@ GameObject:
   - component: {fileID: 734635214}
   - component: {fileID: 734635213}
   m_Layer: 5
-  m_Name: BestScore_TMP (1)
+  m_Name: OtherGame_TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3781,7 +3781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1920, y: 0}
+  m_AnchoredPosition: {x: 2500, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893239750
@@ -4580,7 +4580,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 150, y: -125}
-  m_SizeDelta: {x: 1000, y: 125}
+  m_SizeDelta: {x: 750, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103917747
 MonoBehaviour:
@@ -5612,7 +5612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1920, y: 0}
+  m_AnchoredPosition: {x: -2500, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351030249

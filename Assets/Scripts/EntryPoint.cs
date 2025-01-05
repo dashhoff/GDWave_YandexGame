@@ -10,7 +10,7 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private SoundSlider SoundSlider;
     [SerializeField] private ToggleSwitch[] ToggleSwitches;
 
-    private void Start()
+    private void Awake()
     {
         StartCoroutine(StartGameCoroutine());
     }
@@ -20,7 +20,7 @@ public class EntryPoint : MonoBehaviour
         GameSettings.Init();
         GameManager.Init();
 
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
 
         UIController.Init();
         SoundSlider.Init();

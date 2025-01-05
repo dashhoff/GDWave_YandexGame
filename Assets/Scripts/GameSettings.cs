@@ -6,6 +6,8 @@ public class GameSettings : MonoBehaviour
 {
     public static GameSettings Instance;
 
+    public bool SkipAd;
+
     public int Money;
 
     public int BestScore;
@@ -30,6 +32,8 @@ public class GameSettings : MonoBehaviour
 
     public void SetParameters()
     {
+        SkipAd = YandexGame.savesData.SkipAd;
+
         Money = YandexGame.savesData.Money;
         BestScore = YandexGame.savesData.BestScore;
 
@@ -47,6 +51,8 @@ public class GameSettings : MonoBehaviour
     [Button]
     public void Save()
     {
+        YandexGame.savesData.SkipAd = SkipAd;
+
         YandexGame.savesData.Money = Money;
         YandexGame.savesData.BestScore = BestScore;
 
@@ -61,6 +67,8 @@ public class GameSettings : MonoBehaviour
     [Button]
     public void ResetProgress()
     {
+        SkipAd = false;
+
         Money = 0;
         BestScore = 0;
 

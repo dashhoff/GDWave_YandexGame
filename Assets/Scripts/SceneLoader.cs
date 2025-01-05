@@ -8,7 +8,8 @@ public class SceneLoader : MonoBehaviour
     {
         Time.timeScale = 1.0f;
 
-        YandexGame.FullscreenShow();
+        if (!GameSettings.Instance.SkipAd)
+            YandexGame.FullscreenShow();
 
         SceneManager.LoadScene(id);
     }
@@ -17,7 +18,8 @@ public class SceneLoader : MonoBehaviour
     {
         Time.timeScale = 1.0f;
 
-        YandexGame.FullscreenShow();
+        if (!GameSettings.Instance.SkipAd)
+            YandexGame.FullscreenShow();
 
         SceneManager.LoadScene(id);
     }
@@ -26,7 +28,8 @@ public class SceneLoader : MonoBehaviour
     {
         Time.timeScale = 1.0f;
 
-        YandexGame.FullscreenShow();
+        if (!GameSettings.Instance.SkipAd)
+            YandexGame.FullscreenShow();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

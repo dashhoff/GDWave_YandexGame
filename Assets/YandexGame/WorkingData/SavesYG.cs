@@ -12,6 +12,8 @@ namespace YG
 
         // Ваши сохранения
 
+        public bool SkipAd = false;
+
         public int Money = 10;
         public int BestScore = 0;
 

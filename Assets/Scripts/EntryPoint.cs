@@ -6,11 +6,13 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private GameManager GameManager;
     [SerializeField] private GameSettings GameSettings;
 
+    [SerializeField] private Shop Shop;
+
     [SerializeField] private UIController UIController;
     [SerializeField] private SoundSlider SoundSlider;
     [SerializeField] private ToggleSwitch[] ToggleSwitches;
 
-    private void Awake()
+    private void Start()
     {
         StartCoroutine(StartGameCoroutine());
     }
@@ -29,7 +31,7 @@ public class EntryPoint : MonoBehaviour
         {
             ToggleSwitches[i].Init();
         }
-        
 
+        Shop.Init();
     }
 }

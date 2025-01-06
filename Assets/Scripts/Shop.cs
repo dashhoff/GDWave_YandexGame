@@ -1,63 +1,92 @@
 using UnityEngine;
-using UnityEngine.UI;
-using YG;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _skinsUI;
-    [SerializeField] private GameObject[] _priceUI;
-    [SerializeField] private int[] _price;
-        
-    [SerializeField] private AudioSource _errorBuySound;
-    [SerializeField] private AudioSource _buySound;
-    [SerializeField] private AudioSource _selectSound;
+    [SerializeField] private ShopProduct[] _products;
+
+    [SerializeField] private Sprite[] _skinsImages;
 
     private void Start()
     {
-        for (int i = 0; i < _priceUI.Length; i++)
+        for (int i = 0; i < _products.Length; i++)
         {
-            if (!YandexGame.savesData.OpenSkins[i])
-            {
-                _priceUI[i].SetActive(true);
-            }
+            _products[i].Id = i;
+            _products[i].SkinImage.sprite = _skinsImages[i];
         }
-            
-        for (int i = 0; i < _skinsUI.Length; i++)
-        {
-            if (YandexGame.savesData.OpenSkins[i])
-            {
-                Image image = _skinsUI[i].GetComponent<Image>();
-                image.color = Color.white;
-            }
-        }
+
+        _products[GameSettings.Instance.PlayerSkinId].SetPurchased(true);
+        _products[GameSettings.Instance.PlayerSkinId].SetEquip(true);
+
+        UpdateProsduct();
     }
 
-    public void SelectOrBuyObject(int id)
+    public void Init()
     {
-        if (YandexGame.savesData.OpenSkins[id])
+        for (int i = 0; i < _products.Length; i++)
         {
-            _selectSound.Play();
-                
-            YandexGame.savesData.PlayerSkinId = id;
-            YandexGame.SaveProgress();
+            _products[i].Id = i;
+            _products[i].SkinImage.sprite = _skinsImages[i];
         }
-        else if (YandexGame.savesData.Money > _price[id])
+
+        _products[GameSettings.Instance.PlayerSkinId].SetPurchased(true);
+        _products[GameSettings.Instance.PlayerSkinId].SetEquip(true);
+
+        UpdateProsduct();
+    }
+
+    public void TrySelectOrBuyObject(int id)
+    {
+        if (GameSettings.Instance.OpenSkins[id] && GameSettings.Instance.PlayerSkinId != id)
         {
-            _buySound.Play();
-                
-            Image image = _skinsUI[id].GetComponent<Image>();
-            image.color = Color.white;
-                
-            _priceUI[id].SetActive(false);
-                
-            YandexGame.savesData.Money -= _price[id];
-            YandexGame.savesData.OpenSkins[id] = true;
-            YandexGame.savesData.PlayerSkinId = id;
-            YandexGame.SaveProgress();
+            EquipSkin(id);
+        }
+        if (!GameSettings.Instance.OpenSkins[id] && GameSettings.Instance.Money >= _products[id].Price)
+        {
+            BuySkin(id);
         }
         else
         {
-            _errorBuySound.Play();
+            AudioController.Instance.PlayErrorSound();
+        }
+    }
+
+    public void BuySkin(int id)
+    {
+        GameSettings.Instance.Money -= _products[id].Price;
+        GameSettings.Instance.PlayerSkinId = id;
+        GameSettings.Instance.OpenSkins[id] = true;
+        GameSettings.Instance.Save();
+
+        UpdateProsduct();
+
+        EquipSkin(id);
+
+        AudioController.Instance.PlayBuySound();
+    }
+
+    public void EquipSkin(int id)
+    {
+        for (int i = 0; i < _products.Length; i++)
+        {
+            _products[i].SetEquip(false);
+        }
+
+        _products[id].SetPurchased(true);
+
+        _products[id].SetEquip(true);
+
+        UpdateProsduct();
+
+        AudioController.Instance.PlayEquipSound();
+    }
+
+    public void UpdateProsduct()
+    {
+        for (int i = 0; i < _products.Length; i++)
+        {
+            _products[i].Init();
+
+            _products[i].UpdateButtons();
         }
     }
 }

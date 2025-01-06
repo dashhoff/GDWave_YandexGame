@@ -17,7 +17,13 @@ namespace YG
         public int Money = 10;
         public int BestScore = 0;
 
-        public bool[] OpenSkins = { true, false };
+        public bool[] OpenSkins = 
+        {   true, false, false, false, false, 
+            false, false, false, false, false, 
+            false, false, false, false, false, 
+            false, false, false, false, false
+        };
+
         public int PlayerSkinId = 0;
 
         public float SoundValue = 1;

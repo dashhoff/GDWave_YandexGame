@@ -13,6 +13,7 @@ public class GameSettings : MonoBehaviour
     public int BestScore;
 
     public int PlayerSkinId;
+    public bool[] OpenSkins;
 
     public float SoundValue;
     public bool EffectsEnabled;
@@ -38,6 +39,10 @@ public class GameSettings : MonoBehaviour
         BestScore = YandexGame.savesData.BestScore;
 
         PlayerSkinId = YandexGame.savesData.PlayerSkinId;
+        for (int i = 0; i < OpenSkins.Length; i++)
+        {
+            OpenSkins[i] = YandexGame.savesData.OpenSkins[i];
+        }
 
         SoundValue = YandexGame.savesData.SoundValue;
         EffectsEnabled = YandexGame.savesData.EffectsEnabled;
@@ -57,6 +62,10 @@ public class GameSettings : MonoBehaviour
         YandexGame.savesData.BestScore = BestScore;
 
         YandexGame.savesData.PlayerSkinId = PlayerSkinId;
+        for (int i = 0; i < OpenSkins.Length; i++)
+        {
+            YandexGame.savesData.OpenSkins[i] = OpenSkins[i];
+        }
 
         YandexGame.savesData.SoundValue = SoundValue;
         YandexGame.savesData.EffectsEnabled = EffectsEnabled;
@@ -73,6 +82,11 @@ public class GameSettings : MonoBehaviour
         BestScore = 0;
 
         PlayerSkinId = 0;
+        for (int i = 0; i < OpenSkins.Length; i++)
+        {
+            OpenSkins[i] = false;
+        }
+        OpenSkins[0] = true;
 
         SoundValue = 1;
         EffectsEnabled = true;

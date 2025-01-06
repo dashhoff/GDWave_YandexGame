@@ -8,6 +8,9 @@ public class AudioController : MonoBehaviour
     [SerializeField] private GameObject _soundPrefab;
 
     [SerializeField] private AudioClip _uiSound;
+
+    [SerializeField] private AudioClip _equipSound;
+    [SerializeField] private AudioClip _buySound;
     [SerializeField] private AudioClip _errorSound;
 
     [SerializeField] private AudioClip _levelCompletedSound;
@@ -48,6 +51,39 @@ public class AudioController : MonoBehaviour
         AudioSource audioSource = sound.GetComponent<AudioSource>();
 
         audioSource.clip = _uiSound;
+        audioSource.volume = GameSettings.Instance.SoundValue;
+        audioSource.Play();
+    }
+
+    public void PlayEquipSound()
+    {
+        GameObject sound = Instantiate(_soundPrefab);
+
+        AudioSource audioSource = sound.GetComponent<AudioSource>();
+
+        audioSource.clip = _equipSound;
+        audioSource.volume = GameSettings.Instance.SoundValue;
+        audioSource.Play();
+    }
+
+    public void PlayBuySound()
+    {
+        GameObject sound = Instantiate(_soundPrefab);
+
+        AudioSource audioSource = sound.GetComponent<AudioSource>();
+
+        audioSource.clip = _buySound;
+        audioSource.volume = GameSettings.Instance.SoundValue;
+        audioSource.Play();
+    }
+
+    public void PlayErrorSound()
+    {
+        GameObject sound = Instantiate(_soundPrefab);
+
+        AudioSource audioSource = sound.GetComponent<AudioSource>();
+
+        audioSource.clip = _errorSound;
         audioSource.volume = GameSettings.Instance.SoundValue;
         audioSource.Play();
     }

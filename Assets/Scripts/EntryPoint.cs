@@ -19,19 +19,20 @@ public class EntryPoint : MonoBehaviour
 
     private IEnumerator StartGameCoroutine()
     {
-        GameSettings.Init();
-        GameManager.Init();
+        if (GameSettings != null) GameSettings.Init();
+        if (GameManager != null) GameManager.Init();
 
         yield return new WaitForSecondsRealtime(0.1f);
 
-        UIController.Init();
-        SoundSlider.Init();
+        if (UIController != null) UIController.Init();
+        if (SoundSlider != null) SoundSlider.Init();
 
         for (int i = 0; i < ToggleSwitches.Length; i++)
         {
-            ToggleSwitches[i].Init();
+            if (ToggleSwitches[i] != null)
+                ToggleSwitches[i].Init();
         }
 
-        Shop.Init();
+        if (Shop != null) Shop.Init();
     }
 }

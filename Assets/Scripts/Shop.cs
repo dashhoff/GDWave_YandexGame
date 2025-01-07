@@ -34,27 +34,17 @@ public class Shop : MonoBehaviour
         UpdateProsduct();
     }
 
-    public void TrySelectOrBuyObject(int id)
-    {
-        if (GameSettings.Instance.OpenSkins[id] && GameSettings.Instance.PlayerSkinId != id)
-        {
-            EquipSkin(id);
-        }
-        if (!GameSettings.Instance.OpenSkins[id] && GameSettings.Instance.Money >= _products[id].Price)
-        {
-            BuySkin(id);
-        }
-        else
-        {
-            AudioController.Instance.PlayErrorSound();
-        }
-    }
-
     public void BuySkin(int id)
     {
+        if (GameSettings.Instance.Money < _products[id].Price)
+        {
+            AudioController.Instance.PlayErrorSound();
+            return;
+        }
+
         GameSettings.Instance.Money -= _products[id].Price;
         GameSettings.Instance.PlayerSkinId = id;
-        GameSettings.Instance.OpenSkins[id] = true;
+        GameSettings.Instance.IntOpenSkins[id] = 1;
         GameSettings.Instance.Save();
 
         UpdateProsduct();
@@ -62,18 +52,14 @@ public class Shop : MonoBehaviour
         EquipSkin(id);
 
         AudioController.Instance.PlayBuySound();
+
+        UIController.Instance.UpdateMoneyText();
     }
 
     public void EquipSkin(int id)
     {
-        for (int i = 0; i < _products.Length; i++)
-        {
-            _products[i].SetEquip(false);
-        }
-
-        _products[id].SetPurchased(true);
-
-        _products[id].SetEquip(true);
+        GameSettings.Instance.PlayerSkinId = id;
+        GameSettings.Instance.Save();
 
         UpdateProsduct();
 

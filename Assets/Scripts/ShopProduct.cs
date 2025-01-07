@@ -19,24 +19,19 @@ public class ShopProduct : MonoBehaviour
     [SerializeField] private GameObject _equipButton;
     [SerializeField] private GameObject _equippedImage;
 
-    private void Start()
-    {
-        Init();
-
-        UpdateButtons();
-    }
-
     public void Init()
     {
+        if (GameSettings.Instance.IntOpenSkins[Id] == 1)
+            _purchased = true;
+        else
+            _equipped = false;
+
         if (GameSettings.Instance.PlayerSkinId == Id)
             _equipped = true;
         else
             _equipped = false;
 
-        if (GameSettings.Instance.OpenSkins[Id] == true)
-            _purchased = true;
-        else
-            _equipped = false;
+        UpdateButtons();
     }
 
     public void UpdateButtons()

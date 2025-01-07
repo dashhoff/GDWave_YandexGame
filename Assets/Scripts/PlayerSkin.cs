@@ -6,6 +6,11 @@ public class PlayerSkin : MonoBehaviour
 
     [SerializeField] private SpriteRenderer _playerSpriteRenderer;
 
+    private void Start()
+    {
+        Init();
+    }
+
     public void Init()
     {
         SetSkin();

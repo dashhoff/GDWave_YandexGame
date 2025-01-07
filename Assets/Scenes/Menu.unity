@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -441,7 +445,7 @@ MonoBehaviour:
   Money: 0
   BestScore: 0
   PlayerSkinId: 0
-  OpenSkins: 0100000000000000000000000000000000000000
+  IntOpenSkins: 0100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   SoundValue: 1
   EffectsEnabled: 1
 --- !u!4 &32063507
@@ -625,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -653,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1177,7 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1205,7 +1209,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2776,7 +2780,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2804,7 +2808,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2906,6 +2910,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2956,7 +2964,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2984,7 +2992,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3085,6 +3093,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3444,7 +3456,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3472,7 +3484,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3573,6 +3585,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 254
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4684,7 +4700,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4712,7 +4728,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4813,6 +4829,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5048,7 +5068,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -5076,7 +5096,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -5177,6 +5197,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 254
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5397,7 +5421,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -5425,7 +5449,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -5526,6 +5550,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 254
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6242,7 +6270,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -6270,7 +6298,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -6371,6 +6399,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 254
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6685,7 +6717,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -6713,7 +6745,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -6814,6 +6846,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7231,7 +7267,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -7259,7 +7295,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -7360,6 +7396,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7814,7 +7854,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -7842,7 +7882,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -7943,6 +7983,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8366,7 +8410,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8394,7 +8438,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8496,6 +8540,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8546,7 +8594,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8574,7 +8622,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8675,6 +8723,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8836,7 +8888,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8864,7 +8916,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9154,7 +9206,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9182,7 +9234,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9284,6 +9336,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9334,7 +9390,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9362,7 +9418,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9463,6 +9519,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9731,7 +9791,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9759,7 +9819,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9860,6 +9920,10 @@ PrefabInstance:
     - target: {fileID: 7959226022632976407, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
+      propertyPath: Price
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11995,7 +12059,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: EquipSkin
       objectReference: {fileID: 0}
     - target: {fileID: 1144592072339040302, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -12019,7 +12083,7 @@ PrefabInstance:
       objectReference: {fileID: 1254366520}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySelectOrBuyObject
+      value: BuySkin
       objectReference: {fileID: 0}
     - target: {fileID: 1821147966108927560, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

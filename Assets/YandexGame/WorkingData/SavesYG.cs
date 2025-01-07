@@ -17,12 +17,8 @@ namespace YG
         public int Money = 10;
         public int BestScore = 0;
 
-        public bool[] OpenSkins = 
-        {   true, false, false, false, false, 
-            false, false, false, false, false, 
-            false, false, false, false, false, 
-            false, false, false, false, false
-        };
+        public bool[] OpenSkins = {true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
+        public int[] IntOpenSkins = { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         public int PlayerSkinId = 0;
 
@@ -34,6 +30,7 @@ namespace YG
         // Вы можете выполнить какие то действия при загрузке сохранений
         public SavesYG()
         {
+            OpenSkins[0] = true;
         }
     }
 }

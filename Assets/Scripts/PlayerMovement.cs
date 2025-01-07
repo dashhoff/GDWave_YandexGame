@@ -74,6 +74,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Coin"))
         {
+            Coin coin = collision.gameObject.GetComponent<Coin>();
+            if (coin.Collected) return;
+
+            coin.Collected = true;
+
             Debug.Log("CoinCollected");
 
             EventManager.OnCollectCoin();

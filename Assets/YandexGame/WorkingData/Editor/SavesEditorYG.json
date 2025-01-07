@@ -1,11 +1,11 @@
 {
-    "idSave": 3565,
+    "idSave": 3596,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
     "SkipAd": false,
-    "Money": 11,
-    "BestScore": 1,
+    "Money": 20,
+    "BestScore": 5,
     "OpenSkins": [
         true,
         true
@@ -30,9 +30,9 @@
         0,
         0,
         0,
-        0
+        1
     ],
-    "PlayerSkinId": 9,
+    "PlayerSkinId": 19,
     "SoundValue": 1.0,
     "EffectsEnabled": true
 }

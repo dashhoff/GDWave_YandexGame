@@ -3,6 +3,8 @@ using DG.Tweening;
 
 public class Coin : MonoBehaviour
 {
+    public bool Collected = false;
+
     [SerializeField] private Vector3 _endTrasform = new Vector3(1.1f, 1.1f, 1.1f);
     [SerializeField] private float _timeToEnd = 0.2f;
 
@@ -11,7 +13,9 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
+        {
             DestroyAnim();
+        }
     }
 
     private void DestroyAnim()

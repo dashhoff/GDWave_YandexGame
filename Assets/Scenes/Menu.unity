@@ -3588,7 +3588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: Price
-      value: 254
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4143,9 +4143,9 @@ MonoBehaviour:
   _soundPrefab: {fileID: 5592835032814157348, guid: 1bde634d9fb08f947afd66819e208d77, type: 3}
   _uiSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
   _equipSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
-  _buySound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
-  _errorSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
-  _levelCompletedSound: {fileID: 8300000, guid: 32d54308fee56664c90a91af33e87b7a, type: 3}
+  _buySound: {fileID: 8300000, guid: 7163e28c51ed0034ea04a89db13db8ca, type: 3}
+  _errorSound: {fileID: 8300000, guid: 227c2a2ded7b88b4cb5fb00ebfd4bce3, type: 3}
+  _levelCompletedSound: {fileID: 8300000, guid: ae2ffe0050faeaf48b7053fb7d597e79, type: 3}
   _coinSound: {fileID: 8300000, guid: 5791151108685494486bb99ea33fbf9d, type: 3}
   _defeatSound: {fileID: 8300000, guid: 31e11d071cbbd4f46baa853896c65f44, type: 3}
 --- !u!4 &552162935
@@ -5200,7 +5200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: Price
-      value: 254
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5553,7 +5553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: Price
-      value: 254
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6402,7 +6402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8811736993682331962, guid: 859a6a8042f30b34da1684a733ee9053, type: 3}
       propertyPath: Price
-      value: 254
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

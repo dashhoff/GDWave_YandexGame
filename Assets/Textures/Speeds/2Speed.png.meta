@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f0b4970b5d592f34eb7f7796d2311eba
+guid: e85600c332c122249bdefd5a2165b581
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2111430238723242209
-    second: particle_173_001_0
+      213: -570313060397412774
+    second: 2Speed_0
+  - first:
+      213: -6778832462340666478
+    second: 2Speed_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,9 +114,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
-    textureFormat: 48
+    textureFormat: 46
     textureCompression: 1
     compressionQuality: 100
     crunchedCompression: 0
@@ -139,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: particle_173_001_0
+      name: 2Speed_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 127
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +157,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1702ec7261b2b2e0800000000000000
-      internalID: -2111430238723242209
+      spriteID: a5e0f301b47d518f0800000000000000
+      internalID: -570313060397412774
       vertices: []
       indices: 
       edges: []
@@ -164,7 +167,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7c96e3f1d066a1f428177854ad9baff6
+    spriteID: 73d414fb5ad59e246bc14020a764219d
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +177,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      particle_173_001_0: -2111430238723242209
+      2Speed_0: -570313060397412774
+      2Speed_1: -6778832462340666478
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: f0b4970b5d592f34eb7f7796d2311eba
+guid: 93293aecbe160274482893929e647cfc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2111430238723242209
-    second: particle_173_001_0
+      213: 3641010065859656973
+    second: 3Speed_0
+  - first:
+      213: -6816551029977476435
+    second: 3Speed_1
+  - first:
+      213: -8813389248860918949
+    second: 3Speed_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,9 +117,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
-    textureFormat: 48
+    textureFormat: 46
     textureCompression: 1
     compressionQuality: 100
     crunchedCompression: 0
@@ -139,13 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: particle_173_001_0
+      name: 3Speed_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 127
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1702ec7261b2b2e0800000000000000
-      internalID: -2111430238723242209
+      spriteID: da29ed034feb661a0800000000000000
+      internalID: -6816551029977476435
       vertices: []
       indices: 
       edges: []
@@ -164,7 +170,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7c96e3f1d066a1f428177854ad9baff6
+    spriteID: 2583d4ef592a5f749aa3ed99ae0c46a2
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +180,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      particle_173_001_0: -2111430238723242209
+      3Speed_0: 3641010065859656973
+      3Speed_1: -6816551029977476435
+      3Speed_2: -8813389248860918949
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

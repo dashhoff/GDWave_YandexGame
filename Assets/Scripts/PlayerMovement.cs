@@ -9,7 +9,12 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private bool _isMoving = false;
 
-    [SerializeField] private float _speed = 20;
+    [SerializeField] private float _speed = 20f;
+
+    [SerializeField] private float _1Speed = 10f;
+    [SerializeField] private float _2Speed = 20f;
+    [SerializeField] private float _3Speed = 30f;
+    [SerializeField] private float _4Speed = 40f;
 
     private Vector2 direction;
 
@@ -82,6 +87,27 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("CoinCollected");
 
             EventManager.OnCollectCoin();
+        }
+
+        if (collision.gameObject.CompareTag("1Speed"))
+        {
+            Debug.Log("1 Speed player");
+            SetSpeed(_1Speed);
+        }
+        if (collision.gameObject.CompareTag("2Speed"))
+        {
+            Debug.Log("2 Speed player");
+            SetSpeed(_2Speed);
+        }
+        if (collision.gameObject.CompareTag("3Speed"))
+        {
+            Debug.Log("3 Speed player");
+            SetSpeed(_3Speed);
+        }
+        if (collision.gameObject.CompareTag("4Speed"))
+        {
+            Debug.Log("4 Speed player");
+            SetSpeed(_4Speed);
         }
     }
 

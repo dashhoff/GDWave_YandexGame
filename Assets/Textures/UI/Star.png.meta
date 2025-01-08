@@ -142,12 +142,12 @@ TextureImporter:
       name: Star_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 23
-        width: 263
-        height: 257
+        x: 0
+        y: 0
+        width: 302
+        height: 306
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 07dda0d97c8b27a44beada49d96dd357
     internalID: 0
     vertices: []
     indices: 

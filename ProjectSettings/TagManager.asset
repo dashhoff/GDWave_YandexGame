@@ -7,6 +7,10 @@ TagManager:
   - Trap
   - LevelLoader
   - Coin
+  - 1Speed
+  - 2Speed
+  - 3Speed
+  - 4Speed
   layers:
   - Default
   - TransparentFX

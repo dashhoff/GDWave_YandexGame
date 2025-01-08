@@ -35,7 +35,7 @@ public class PaymentsController : MonoBehaviour
         else if (id == "2")
             GameSettings.Instance.Money += 100;
         else if (id == "3")
-            GameSettings.Instance.Money += 5000;
+            GameSettings.Instance.Money += 500;
 
         GameSettings.Instance.Save();
 

@@ -446,6 +446,33 @@ MonoBehaviour:
     priceCurrencyCode: YAN
     currencyImageURL: https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-s@2x.png
     consumed: 1
+  - id: 1
+    title: SkipAd
+    description: Product - Grenade
+    imageURI: https://justplaygames.ru/public/Paymant3.png
+    price: 30 YAN
+    priceValue: 30
+    priceCurrencyCode: YAN
+    currencyImageURL: https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-s@2x.png
+    consumed: 1
+  - id: 2
+    title: 100 coins
+    description: Product - Grenade
+    imageURI: https://justplaygames.ru/public/Paymant3.png
+    price: 50 YAN
+    priceValue: 50
+    priceCurrencyCode: YAN
+    currencyImageURL: https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-s@2x.png
+    consumed: 0
+  - id: 3
+    title: 500 coins
+    description: Product - Grenade
+    imageURI: https://justplaygames.ru/public/Paymant3.png
+    price: 100 YAN
+    priceValue: 100
+    priceCurrencyCode: YAN
+    currencyImageURL: https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-s@2x.png
+    consumed: 0
   metricaEnable: 0
   metricaCounterID: 0
   debug: 1

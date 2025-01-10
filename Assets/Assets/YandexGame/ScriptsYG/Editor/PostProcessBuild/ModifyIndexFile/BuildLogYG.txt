@@ -1,0 +1,2 @@
+Build path: D:/Unity/Unity All Backups/Builds/GDWave_YandexGame/1.0.4
+Build number: 5

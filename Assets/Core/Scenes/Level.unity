@@ -462,11 +462,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _godMode: 0
   _isMoving: 0
-  _speed: 20
-  _1Speed: 10
-  _2Speed: 20
-  _3Speed: 30
-  _4Speed: 40
+  _speed: 10
+  _1Speed: 5
+  _2Speed: 15
+  _3Speed: 17.5
+  _4Speed: 20
   _rb2D: {fileID: 201528013}
   _playerSpriteRenderer: {fileID: 369580981}
 --- !u!61 &201528012

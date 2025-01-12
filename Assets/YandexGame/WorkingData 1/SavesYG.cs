@@ -23,6 +23,7 @@ namespace YG
         public int PlayerSkinId = 0;
 
         public float SoundValue = 1;
+        public float MusicValue = 1;
         public bool EffectsEnabled = true;
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

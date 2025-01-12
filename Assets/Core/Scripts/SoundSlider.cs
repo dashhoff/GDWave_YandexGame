@@ -3,22 +3,36 @@ using UnityEngine.UI;
 
 public class SoundSlider : MonoBehaviour
 {
-    [SerializeField] private Slider _slider;
+    [SerializeField] private Slider _soundSlider;
+    [SerializeField] private Slider _musicSlider;
 
     public void Init()
     {
-        SetValue();
+        SetSoundValue();
+        SetMusicValue();
     }
 
-    public void SaveValue()
+    public void SaveSoundValue()
     {
-        GameSettings.Instance.SoundValue = _slider.value;
+        GameSettings.Instance.SoundValue = _soundSlider.value;
 
         GameSettings.Instance.Save();
     }
 
-    public void SetValue()
+    public void SetSoundValue()
     {
-        _slider.value = GameSettings.Instance.SoundValue;
+        _soundSlider.value = GameSettings.Instance.SoundValue;
+    }
+
+    public void SaveMusicValue()
+    {
+        GameSettings.Instance.MusicValue = _musicSlider.value;
+
+        GameSettings.Instance.Save();
+    }
+
+    public void SetMusicValue()
+    {
+        _musicSlider.value = GameSettings.Instance.MusicValue;
     }
 }

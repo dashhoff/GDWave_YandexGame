@@ -16,6 +16,8 @@ public class GameSettings : MonoBehaviour
     public int[] IntOpenSkins;
 
     public float SoundValue;
+    public float MusicValue;
+
     public bool EffectsEnabled;
 
     private void Start()
@@ -46,11 +48,13 @@ public class GameSettings : MonoBehaviour
         }
 
         SoundValue = YandexGame.savesData.SoundValue;
+        MusicValue = YandexGame.savesData.MusicValue;
         EffectsEnabled = YandexGame.savesData.EffectsEnabled;
 
         Debug.Log("Money: " + Money);
         Debug.Log("BestScore: " + BestScore);
         Debug.Log("SoundValue: " + SoundValue);
+        Debug.Log("MusicValue: " + MusicValue);
         Debug.Log("EffectsEnabled: " + EffectsEnabled);
     }
 
@@ -70,6 +74,7 @@ public class GameSettings : MonoBehaviour
         }
 
         YandexGame.savesData.SoundValue = SoundValue;
+        YandexGame.savesData.MusicValue =MusicValue;
         YandexGame.savesData.EffectsEnabled = EffectsEnabled;
 
         YandexGame.SaveProgress();
@@ -92,6 +97,7 @@ public class GameSettings : MonoBehaviour
         IntOpenSkins[0] = 1;
 
         SoundValue = 1;
+        MusicValue = 1;
         EffectsEnabled = true;
 
         Save();
